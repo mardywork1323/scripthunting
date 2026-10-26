@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stack and queue in Python · Scriptfinder</title>
+<meta name="description" content="Last-in-first-out and first-in-first-out containers. Copy-ready Python code with the command to build and run it.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/python/stack-queue.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/python/stack-queue.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scriptfinder">
+<meta property="og:title" content="Stack and queue in Python · Scriptfinder">
+<meta property="og:description" content="Last-in-first-out and first-in-first-out containers. Copy-ready Python code with the command to build and run it.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#151A2C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23151A2C%22%2F%3E%3Cpath%20d%3D%22M12%209l-6%207%206%207M20%209l6%207-6%207%22%20fill%3D%22none%22%20stroke%3D%22%239AA8FF%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Stack and queue in Python","description":"Last-in-first-out and first-in-first-out containers.","programmingLanguage":"Python","codeSampleType":"code snippet","keywords":"lifo, fifo, push, pop, deque, enqueue","text":"from collections import deque\n\nstack = []\nstack.append(1)\nstack.append(2)\nstack.pop()        # 2\n\nqueue = deque()\nqueue.append(1)\nqueue.append(2)\nqueue.popleft()    # 1, O(1)","url":"https://mardywork1323.github.io/scriptfinder/python/stack-queue.html"}</script>
+
+</head>
+<body>
+<header class="band slim">
+  <div class="wrap">
+    <a class="wordmark" href="../">Script<b>finder</b></a>
+    <form class="mini" action="../" method="get" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <input type="search" name="q" placeholder="Search all snippets" aria-label="Search all snippets" autocomplete="off" spellcheck="false">
+    </form>
+    <nav class="langnav" aria-label="Languages"><a class="pill" href="../c/" style="--lc:var(--l-c)"><span class="dot"></span>C</a><a class="pill" href="../cpp/" style="--lc:var(--l-cpp)"><span class="dot"></span>C++</a><a class="pill" href="../csharp/" style="--lc:var(--l-cs)"><span class="dot"></span>C#</a><a class="pill" href="../javascript/" style="--lc:var(--l-js)"><span class="dot"></span>JavaScript</a><a class="pill" href="../python/" style="--lc:var(--l-py)" aria-current="page"><span class="dot"></span>Python</a><a class="pill" href="../all.html">All on one page</a></nav>
+  </div>
+</header>
+<main class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Scriptfinder</a><span>/</span><a href="../python/">Python</a><span>/</span><span>Data structures</span></nav>
+  <div class="dhead">
+    <span class="eyebrow">Data structures · Python</span>
+    <h1>Stack and queue in Python</h1>
+    <p class="desc">Last-in-first-out and first-in-first-out containers.</p>
+  </div>
+  <div class="editor">
+  <div class="ehead">
+    <div class="tabs"><a class="tab" href="../c/stack-queue.html" style="--lc:var(--l-c)" title="Stack and queue in C">stack.c</a><a class="tab" href="../cpp/stack-queue.html" style="--lc:var(--l-cpp)" title="Stack and queue in C++">stack.cpp</a><a class="tab" href="../csharp/stack-queue.html" style="--lc:var(--l-cs)" title="Stack and queue in C#">Program.cs</a><a class="tab" href="../javascript/stack-queue.html" style="--lc:var(--l-js)" title="Stack and queue in JavaScript">stack.mjs</a><a class="tab" href="../python/stack-queue.html" style="--lc:var(--l-py)" aria-current="page" title="Stack and queue in Python">stack.py</a></div>
+    <button type="button" class="copy" data-copy="code" aria-label="Copy Python code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>Copy</button>
+  </div>
+  <pre class="code" id="code"><code class="language-python">from collections import deque
+
+stack = []
+stack.append(1)
+stack.append(2)
+stack.pop()        # 2
+
+queue = deque()
+queue.append(1)
+queue.append(2)
+queue.popleft()    # 1, O(1)</code></pre>
+</div>
+  <div class="lower">
+    <div>
+      <div class="label">Build &amp; run</div>
+      <code class="cmd">python3 stack.py</code>
+      
+    </div>
+    <div>
+      <div class="label">Same task in other languages</div>
+      <ul class="links"><li><a href="../c/stack-queue.html">Stack and queue in C</a></li><li><a href="../cpp/stack-queue.html">Stack and queue in C++</a></li><li><a href="../csharp/stack-queue.html">Stack and queue in C#</a></li><li><a href="../javascript/stack-queue.html">Stack and queue in JavaScript</a></li></ul>
+    </div>
+    <div>
+      <div class="label">More data structures in Python</div>
+      <ul class="links"><li><a href="hash-map.html">Use a hash map or dictionary</a></li><li><a href="class-basics.html">Define a class with a constructor</a></li></ul>
+    </div>
+  </div>
+  <div class="tags"><a class="tag" href="../?q=lifo">lifo</a><a class="tag" href="../?q=fifo">fifo</a><a class="tag" href="../?q=push">push</a><a class="tag" href="../?q=pop">pop</a><a class="tag" href="../?q=deque">deque</a><a class="tag" href="../?q=enqueue">enqueue</a></div>
+</main>
+<footer class="wrap foot">
+  <span><a href="../">Search</a></span>
+  <span><a href="../c/">C snippets</a></span>
+  <span><a href="../cpp/">C++ snippets</a></span>
+  <span><a href="../csharp/">C# snippets</a></span>
+  <span><a href="../javascript/">JavaScript snippets</a></span>
+  <span><a href="../python/">Python snippets</a></span>
+  <span><a href="../all.html">Every snippet on one page</a></span>
+  <span>Standard library first. Read a snippet before you ship it.</span>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script>
+document.addEventListener("click", function (e) {
+  var b = e.target.closest("[data-copy]");
+  if (!b) return;
+  var pre = document.getElementById(b.getAttribute("data-copy"));
+  var text = pre.textContent;
+  var toast = document.getElementById("toast");
+  function show(m) { toast.textContent = m; toast.classList.add("show"); clearTimeout(window.__t); window.__t = setTimeout(function () { toast.classList.remove("show"); }, 1800); }
+  function fallback() { var r = document.createRange(); r.selectNodeContents(pre); var s = getSelection(); s.removeAllRanges(); s.addRange(r); show("Code selected. Press Ctrl+C (\u2318C) to copy."); }
+  try { navigator.clipboard.writeText(text).then(function () { show("Copied"); }, fallback); } catch (err) { fallback(); }
+});
+</script>
+</body>
+</html>
