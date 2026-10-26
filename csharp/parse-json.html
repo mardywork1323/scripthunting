@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parse and create JSON in C# · Scriptfinder</title>
+<meta name="description" content="Turn JSON text into objects and back again. Copy-ready C# code with the command to build and run it.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/csharp/parse-json.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/csharp/parse-json.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Scriptfinder">
+<meta property="og:title" content="Parse and create JSON in C# · Scriptfinder">
+<meta property="og:description" content="Turn JSON text into objects and back again. Copy-ready C# code with the command to build and run it.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#151A2C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23151A2C%22%2F%3E%3Cpath%20d%3D%22M12%209l-6%207%206%207M20%209l6%207-6%207%22%20fill%3D%22none%22%20stroke%3D%22%239AA8FF%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Parse and create JSON in C#","description":"Turn JSON text into objects and back again.","programmingLanguage":"C#","codeSampleType":"code snippet","keywords":"json, serialize, deserialize, stringify, parse","text":"using System;\nusing System.Text.Json;\n\nvar opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };\nvar p = JsonSerializer.Deserialize\u003cPerson>(\"{\\\"name\\\":\\\"Ana\\\",\\\"age\\\":31}\", opts)!;\nConsole.WriteLine($\"{p.Name} is {p.Age}\");\n\nstring json = JsonSerializer.Serialize(p);   // {\"Name\":\"Ana\",\"Age\":31}\n\nrecord Person(string Name, int Age);","url":"https://mardywork1323.github.io/scriptfinder/csharp/parse-json.html"}</script>
+
+</head>
+<body>
+<header class="band slim">
+  <div class="wrap">
+    <a class="wordmark" href="../">Script<b>finder</b></a>
+    <form class="mini" action="../" method="get" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <input type="search" name="q" placeholder="Search all snippets" aria-label="Search all snippets" autocomplete="off" spellcheck="false">
+    </form>
+    <nav class="langnav" aria-label="Languages"><a class="pill" href="../c/" style="--lc:var(--l-c)"><span class="dot"></span>C</a><a class="pill" href="../cpp/" style="--lc:var(--l-cpp)"><span class="dot"></span>C++</a><a class="pill" href="../csharp/" style="--lc:var(--l-cs)" aria-current="page"><span class="dot"></span>C#</a><a class="pill" href="../javascript/" style="--lc:var(--l-js)"><span class="dot"></span>JavaScript</a><a class="pill" href="../python/" style="--lc:var(--l-py)"><span class="dot"></span>Python</a><a class="pill" href="../all.html">All on one page</a></nav>
+  </div>
+</header>
+<main class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Scriptfinder</a><span>/</span><a href="../csharp/">C#</a><span>/</span><span>Web &amp; async</span></nav>
+  <div class="dhead">
+    <span class="eyebrow">Web &amp; async · C#</span>
+    <h1>Parse and create JSON in C#</h1>
+    <p class="desc">Turn JSON text into objects and back again.</p>
+  </div>
+  <div class="editor">
+  <div class="ehead">
+    <div class="tabs"><a class="tab" href="../c/parse-json.html" style="--lc:var(--l-c)" title="Parse and create JSON in C">json.c</a><a class="tab" href="../cpp/parse-json.html" style="--lc:var(--l-cpp)" title="Parse and create JSON in C++">json.cpp</a><a class="tab" href="../csharp/parse-json.html" style="--lc:var(--l-cs)" aria-current="page" title="Parse and create JSON in C#">Program.cs</a><a class="tab" href="../javascript/parse-json.html" style="--lc:var(--l-js)" title="Parse and create JSON in JavaScript">json.mjs</a><a class="tab" href="../python/parse-json.html" style="--lc:var(--l-py)" title="Parse and create JSON in Python">json.py</a></div>
+    <button type="button" class="copy" data-copy="code" aria-label="Copy C# code"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg>Copy</button>
+  </div>
+  <pre class="code" id="code"><code class="language-csharp">using System;
+using System.Text.Json;
+
+var opts = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+var p = JsonSerializer.Deserialize&lt;Person&gt;(&quot;{\&quot;name\&quot;:\&quot;Ana\&quot;,\&quot;age\&quot;:31}&quot;, opts)!;
+Console.WriteLine($&quot;{p.Name} is {p.Age}&quot;);
+
+string json = JsonSerializer.Serialize(p);   // {&quot;Name&quot;:&quot;Ana&quot;,&quot;Age&quot;:31}
+
+record Person(string Name, int Age);</code></pre>
+</div>
+  <div class="lower">
+    <div>
+      <div class="label">Build &amp; run</div>
+      <code class="cmd">dotnet run</code>
+      <ul class="notes"><li>Paste into Program.cs of a console app (dotnet new console). Needs .NET 6 or later.</li></ul>
+    </div>
+    <div>
+      <div class="label">Same task in other languages</div>
+      <ul class="links"><li><a href="../c/parse-json.html">Parse and create JSON in C</a></li><li><a href="../cpp/parse-json.html">Parse and create JSON in C++</a></li><li><a href="../javascript/parse-json.html">Parse and create JSON in JavaScript</a></li><li><a href="../python/parse-json.html">Parse and create JSON in Python</a></li></ul>
+    </div>
+    <div>
+      <div class="label">More web &amp; async in C#</div>
+      <ul class="links"><li><a href="http-get.html">Make an HTTP GET request</a></li><li><a href="parallel.html">Run work in parallel</a></li></ul>
+    </div>
+  </div>
+  <div class="tags"><a class="tag" href="../?q=json">json</a><a class="tag" href="../?q=serialize">serialize</a><a class="tag" href="../?q=deserialize">deserialize</a><a class="tag" href="../?q=stringify">stringify</a><a class="tag" href="../?q=parse">parse</a></div>
+</main>
+<footer class="wrap foot">
+  <span><a href="../">Search</a></span>
+  <span><a href="../c/">C snippets</a></span>
+  <span><a href="../cpp/">C++ snippets</a></span>
+  <span><a href="../csharp/">C# snippets</a></span>
+  <span><a href="../javascript/">JavaScript snippets</a></span>
+  <span><a href="../python/">Python snippets</a></span>
+  <span><a href="../all.html">Every snippet on one page</a></span>
+  <span>Standard library first. Read a snippet before you ship it.</span>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-clike.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script>
+document.addEventListener("click", function (e) {
+  var b = e.target.closest("[data-copy]");
+  if (!b) return;
+  var pre = document.getElementById(b.getAttribute("data-copy"));
+  var text = pre.textContent;
+  var toast = document.getElementById("toast");
+  function show(m) { toast.textContent = m; toast.classList.add("show"); clearTimeout(window.__t); window.__t = setTimeout(function () { toast.classList.remove("show"); }, 1800); }
+  function fallback() { var r = document.createRange(); r.selectNodeContents(pre); var s = getSelection(); s.removeAllRanges(); s.addRange(r); show("Code selected. Press Ctrl+C (\u2318C) to copy."); }
+  try { navigator.clipboard.writeText(text).then(function () { show("Copied"); }, fallback); } catch (err) { fallback(); }
+});
+</script>
+</body>
+</html>
