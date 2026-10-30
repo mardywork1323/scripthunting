@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-root="../">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -19,6 +19,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/config.js"></script>
+<script src="../assets/site.js" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Check if a number is prime in C++","description":"Trial division up to the square root, skipping even numbers.","programmingLanguage":"C++","codeSampleType":"code snippet","keywords":"prime number, primality, divisor","text":"bool isPrime(long long n) {\n    if (n \u003c 2) return false;\n    if (n % 2 == 0) return n == 2;\n    for (long long i = 3; i * i \u003c= n; i += 2)\n        if (n % i == 0) return false;\n    return true;\n}","url":"https://mardywork1323.github.io/scriptfinder/cpp/is-prime.html"}</script>
 
 </head>
@@ -30,6 +32,13 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
       <input type="search" name="q" placeholder="Search all snippets" aria-label="Search all snippets" autocomplete="off" spellcheck="false">
     </form>
+    <nav class="topnav" aria-label="Site">
+      <a href="../">Search</a>
+      <a href="../ai.html" class="ai-link">AI helper</a>
+      <a href="../plans.html">Plans</a>
+      <a href="../#how" data-intro>How it works</a>
+      <button type="button" class="signin" data-signin>Sign in</button>
+    </nav>
     <nav class="langnav" aria-label="Languages"><a class="pill" href="../c/" style="--lc:var(--l-c)"><span class="dot"></span>C</a><a class="pill" href="../cpp/" style="--lc:var(--l-cpp)" aria-current="page"><span class="dot"></span>C++</a><a class="pill" href="../csharp/" style="--lc:var(--l-cs)"><span class="dot"></span>C#</a><a class="pill" href="../javascript/" style="--lc:var(--l-js)"><span class="dot"></span>JavaScript</a><a class="pill" href="../python/" style="--lc:var(--l-py)"><span class="dot"></span>Python</a><a class="pill" href="../all.html">All on one page</a></nav>
   </div>
 </header>
@@ -72,12 +81,17 @@
 </main>
 <footer class="wrap foot">
   <span><a href="../">Search</a></span>
+  <span><a href="../ai.html">AI script helper</a></span>
+  <span><a href="../plans.html">Plans</a></span>
   <span><a href="../c/">C snippets</a></span>
   <span><a href="../cpp/">C++ snippets</a></span>
   <span><a href="../csharp/">C# snippets</a></span>
   <span><a href="../javascript/">JavaScript snippets</a></span>
   <span><a href="../python/">Python snippets</a></span>
   <span><a href="../all.html">Every snippet on one page</a></span>
+  <span><a href="../terms.html">Terms</a></span>
+  <span><a href="../privacy.html">Privacy</a></span>
+  <span><a href="../refunds.html">Refunds</a></span>
   <span>Standard library first. Read a snippet before you ship it.</span>
 </footer>
 <div class="toast" id="toast" role="status"></div>
