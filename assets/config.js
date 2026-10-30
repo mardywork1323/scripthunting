@@ -1,5 +1,5 @@
 window.SH_CONFIG = {
-  "aiUrl": "",
+  "aiUrl": "https://scripthunting-ai.scripthunting.workers.dev",
   "firebase": null,
   "signInProviders": [
     "google",
