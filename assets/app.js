@@ -150,7 +150,7 @@
 
     // List
     if (!n) {
-      list.innerHTML = `<li class="none"><span>No snippets match “${esc(state.q)}”${state.cat !== "all" ? " in " + esc(state.cat) : ""}. Try one word, like <b>file</b> or <b>sort</b>.</span><button type="button" class="btn" data-clear>Clear search and filters</button></li>`;
+      list.innerHTML = `<li class="none"><span>No snippets match “${esc(state.q)}”${state.cat !== "all" ? " in " + esc(state.cat) : ""}. Try one word, like <b>file</b> or <b>sort</b>, or <a href="ai.html?q=${encodeURIComponent(state.q)}">ask the AI to write it</a>.</span><button type="button" class="btn" data-clear>Clear search and filters</button></li>`;
     } else {
       list.innerHTML = r.results.map(t => {
         const badges = LANGS.map(l => `<span class="b${t.code[l.id] ? " on" : ""}${r.lang === l.id ? " cur" : ""}" style="--lc:var(--l-${l.id})" title="${t.code[l.id] ? l.label : "No " + l.label + " version"}">${esc(l.short)}</span>`).join("");
