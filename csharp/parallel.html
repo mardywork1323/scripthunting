@@ -6,8 +6,8 @@
 <title>Run work in parallel in C# · ScriptHunting</title>
 <meta name="description" content="Start several jobs at once and collect their results. Copy-ready C# code with the command to build and run it.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/csharp/parallel.html">
-<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/csharp/parallel.html">
+<link rel="canonical" href="https://mardywork1323.github.io/scripthunting/csharp/parallel.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scripthunting/csharp/parallel.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScriptHunting">
 <meta property="og:title" content="Run work in parallel in C# · ScriptHunting">
@@ -18,10 +18,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/config.js"></script>
-<script src="../assets/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Run work in parallel in C#","description":"Start several jobs at once and collect their results.","programmingLanguage":"C#","codeSampleType":"code snippet","keywords":"threads, async, await, concurrency, promise, multithreading, tasks","text":"using System;\nusing System.Linq;\nusing System.Threading.Tasks;\n\nint[] results = await Task.WhenAll(\n    Enumerable.Range(1, 4).Select(i => Task.Run(() => i * i)));\n\nConsole.WriteLine(string.Join(\", \", results));   // 1, 4, 9, 16","url":"https://mardywork1323.github.io/scriptfinder/csharp/parallel.html"}</script>
+<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
+<script src="../assets/config.js?v=mvwky5a4"></script>
+<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Run work in parallel in C#","description":"Start several jobs at once and collect their results.","programmingLanguage":"C#","codeSampleType":"code snippet","keywords":"threads, async, await, concurrency, promise, multithreading, tasks","text":"using System;\nusing System.Linq;\nusing System.Threading.Tasks;\n\nint[] results = await Task.WhenAll(\n    Enumerable.Range(1, 4).Select(i => Task.Run(() => i * i)));\n\nConsole.WriteLine(string.Join(\", \", results));   // 1, 4, 9, 16","url":"https://mardywork1323.github.io/scripthunting/csharp/parallel.html"}</script>
 
 </head>
 <body>

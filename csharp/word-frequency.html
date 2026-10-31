@@ -6,8 +6,8 @@
 <title>Count how often each word appears in C# · ScriptHunting</title>
 <meta name="description" content="Split text into words and tally each one, most common first where the language makes that easy. Copy-ready C# code with the command to build and run it.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/csharp/word-frequency.html">
-<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/csharp/word-frequency.html">
+<link rel="canonical" href="https://mardywork1323.github.io/scripthunting/csharp/word-frequency.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scripthunting/csharp/word-frequency.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScriptHunting">
 <meta property="og:title" content="Count how often each word appears in C# · ScriptHunting">
@@ -18,10 +18,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/config.js"></script>
-<script src="../assets/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Count how often each word appears in C#","description":"Split text into words and tally each one, most common first where the language makes that easy.","programmingLanguage":"C#","codeSampleType":"code snippet","keywords":"word count, frequency, histogram, counter, tally","text":"using System;\nusing System.Linq;\n\nvar text = \"the cat and the hat and the bat\";\nvar freq = text.Split(' ', StringSplitOptions.RemoveEmptyEntries)\n               .GroupBy(w => w)\n               .OrderByDescending(g => g.Count());\n\nforeach (var g in freq)\n    Console.WriteLine($\"{g.Key}: {g.Count()}\");","url":"https://mardywork1323.github.io/scriptfinder/csharp/word-frequency.html"}</script>
+<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
+<script src="../assets/config.js?v=mvwky5a4"></script>
+<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Count how often each word appears in C#","description":"Split text into words and tally each one, most common first where the language makes that easy.","programmingLanguage":"C#","codeSampleType":"code snippet","keywords":"word count, frequency, histogram, counter, tally","text":"using System;\nusing System.Linq;\n\nvar text = \"the cat and the hat and the bat\";\nvar freq = text.Split(' ', StringSplitOptions.RemoveEmptyEntries)\n               .GroupBy(w => w)\n               .OrderByDescending(g => g.Count());\n\nforeach (var g in freq)\n    Console.WriteLine($\"{g.Key}: {g.Count()}\");","url":"https://mardywork1323.github.io/scripthunting/csharp/word-frequency.html"}</script>
 
 </head>
 <body>
