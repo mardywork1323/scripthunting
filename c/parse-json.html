@@ -6,8 +6,8 @@
 <title>Parse and create JSON in C · ScriptHunting</title>
 <meta name="description" content="Turn JSON text into objects and back again. Copy-ready C code with the command to build and run it.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/c/parse-json.html">
-<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/c/parse-json.html">
+<link rel="canonical" href="https://mardywork1323.github.io/scripthunting/c/parse-json.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scripthunting/c/parse-json.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScriptHunting">
 <meta property="og:title" content="Parse and create JSON in C · ScriptHunting">
@@ -18,10 +18,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/config.js"></script>
-<script src="../assets/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Parse and create JSON in C","description":"Turn JSON text into objects and back again.","programmingLanguage":"C","codeSampleType":"code snippet","keywords":"json, serialize, deserialize, stringify, parse","text":"#include \u003cstdio.h>\n#include \"cJSON.h\"\n\nint main(void) {\n    const char *text = \"{\\\"name\\\":\\\"Ana\\\",\\\"age\\\":31}\";\n    cJSON *root = cJSON_Parse(text);\n    if (!root) return 1;\n\n    cJSON *name = cJSON_GetObjectItemCaseSensitive(root, \"name\");\n    cJSON *age  = cJSON_GetObjectItemCaseSensitive(root, \"age\");\n    if (cJSON_IsString(name) && cJSON_IsNumber(age))\n        printf(\"%s is %d\\n\", name->valuestring, age->valueint);\n\n    cJSON_Delete(root);\n    return 0;\n}","url":"https://mardywork1323.github.io/scriptfinder/c/parse-json.html"}</script>
+<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
+<script src="../assets/config.js?v=mvwky5a4"></script>
+<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Parse and create JSON in C","description":"Turn JSON text into objects and back again.","programmingLanguage":"C","codeSampleType":"code snippet","keywords":"json, serialize, deserialize, stringify, parse","text":"#include \u003cstdio.h>\n#include \"cJSON.h\"\n\nint main(void) {\n    const char *text = \"{\\\"name\\\":\\\"Ana\\\",\\\"age\\\":31}\";\n    cJSON *root = cJSON_Parse(text);\n    if (!root) return 1;\n\n    cJSON *name = cJSON_GetObjectItemCaseSensitive(root, \"name\");\n    cJSON *age  = cJSON_GetObjectItemCaseSensitive(root, \"age\");\n    if (cJSON_IsString(name) && cJSON_IsNumber(age))\n        printf(\"%s is %d\\n\", name->valuestring, age->valueint);\n\n    cJSON_Delete(root);\n    return 0;\n}","url":"https://mardywork1323.github.io/scripthunting/c/parse-json.html"}</script>
 
 </head>
 <body>

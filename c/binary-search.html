@@ -6,8 +6,8 @@
 <title>Binary search a sorted array in C · ScriptHunting</title>
 <meta name="description" content="Find an item&#39;s index in O(log n). The array must already be sorted. Copy-ready C code with the command to build and run it.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/c/binary-search.html">
-<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/c/binary-search.html">
+<link rel="canonical" href="https://mardywork1323.github.io/scripthunting/c/binary-search.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scripthunting/c/binary-search.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScriptHunting">
 <meta property="og:title" content="Binary search a sorted array in C · ScriptHunting">
@@ -18,10 +18,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/config.js"></script>
-<script src="../assets/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Binary search a sorted array in C","description":"Find an item's index in O(log n). The array must already be sorted.","programmingLanguage":"C","codeSampleType":"code snippet","keywords":"find, lookup, bisect, log n, lower bound","text":"#include \u003cstddef.h>\n\n/* Returns the index of target in sorted arr, or -1. */\nlong binary_search(const int *arr, size_t n, int target) {\n    size_t lo = 0, hi = n;\n    while (lo \u003c hi) {\n        size_t mid = lo + (hi - lo) / 2;\n        if (arr[mid] == target) return (long)mid;\n        if (arr[mid] \u003c target) lo = mid + 1;\n        else hi = mid;\n    }\n    return -1;\n}","url":"https://mardywork1323.github.io/scriptfinder/c/binary-search.html"}</script>
+<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
+<script src="../assets/config.js?v=mvwky5a4"></script>
+<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Binary search a sorted array in C","description":"Find an item's index in O(log n). The array must already be sorted.","programmingLanguage":"C","codeSampleType":"code snippet","keywords":"find, lookup, bisect, log n, lower bound","text":"#include \u003cstddef.h>\n\n/* Returns the index of target in sorted arr, or -1. */\nlong binary_search(const int *arr, size_t n, int target) {\n    size_t lo = 0, hi = n;\n    while (lo \u003c hi) {\n        size_t mid = lo + (hi - lo) / 2;\n        if (arr[mid] == target) return (long)mid;\n        if (arr[mid] \u003c target) lo = mid + 1;\n        else hi = mid;\n    }\n    return -1;\n}","url":"https://mardywork1323.github.io/scripthunting/c/binary-search.html"}</script>
 
 </head>
 <body>

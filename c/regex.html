@@ -6,8 +6,8 @@
 <title>Find matches with a regular expression in C · ScriptHunting</title>
 <meta name="description" content="Pull every number out of a sentence and check whether a string looks like an email address. Copy-ready C code with the command to build and run it.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/c/regex.html">
-<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/c/regex.html">
+<link rel="canonical" href="https://mardywork1323.github.io/scripthunting/c/regex.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scripthunting/c/regex.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScriptHunting">
 <meta property="og:title" content="Find matches with a regular expression in C · ScriptHunting">
@@ -18,10 +18,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/config.js"></script>
-<script src="../assets/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Find matches with a regular expression in C","description":"Pull every number out of a sentence and check whether a string looks like an email address.","programmingLanguage":"C","codeSampleType":"code snippet","keywords":"regex, pattern, match, extract digits, validate email","text":"#include \u003cregex.h>\n#include \u003cstdio.h>\n\nint main(void) {\n    regex_t re;\n    if (regcomp(&re, \"[0-9]+\", REG_EXTENDED) != 0) return 1;\n\n    const char *s = \"order 42 shipped in 3 days\";\n    regmatch_t m;\n    while (regexec(&re, s, 1, &m, 0) == 0) {\n        printf(\"%.*s\\n\", (int)(m.rm_eo - m.rm_so), s + m.rm_so);\n        s += m.rm_eo;\n    }\n    regfree(&re);\n    return 0;\n}","url":"https://mardywork1323.github.io/scriptfinder/c/regex.html"}</script>
+<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
+<script src="../assets/config.js?v=mvwky5a4"></script>
+<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Find matches with a regular expression in C","description":"Pull every number out of a sentence and check whether a string looks like an email address.","programmingLanguage":"C","codeSampleType":"code snippet","keywords":"regex, pattern, match, extract digits, validate email","text":"#include \u003cregex.h>\n#include \u003cstdio.h>\n\nint main(void) {\n    regex_t re;\n    if (regcomp(&re, \"[0-9]+\", REG_EXTENDED) != 0) return 1;\n\n    const char *s = \"order 42 shipped in 3 days\";\n    regmatch_t m;\n    while (regexec(&re, s, 1, &m, 0) == 0) {\n        printf(\"%.*s\\n\", (int)(m.rm_eo - m.rm_so), s + m.rm_so);\n        s += m.rm_eo;\n    }\n    regfree(&re);\n    return 0;\n}","url":"https://mardywork1323.github.io/scripthunting/c/regex.html"}</script>
 
 </head>
 <body>
