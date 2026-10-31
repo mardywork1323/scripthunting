@@ -6,8 +6,8 @@
 <title>Convert a string to a number safely in C++ · ScriptHunting</title>
 <meta name="description" content="Parse text into an integer and detect input that isn&#39;t a number instead of crashing. Copy-ready C++ code with the command to build and run it.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/cpp/string-to-int.html">
-<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/cpp/string-to-int.html">
+<link rel="canonical" href="https://mardywork1323.github.io/scripthunting/cpp/string-to-int.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scripthunting/cpp/string-to-int.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScriptHunting">
 <meta property="og:title" content="Convert a string to a number safely in C++ · ScriptHunting">
@@ -18,10 +18,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/config.js"></script>
-<script src="../assets/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Convert a string to a number safely in C++","description":"Parse text into an integer and detect input that isn't a number instead of crashing.","programmingLanguage":"C++","codeSampleType":"code snippet","keywords":"parse, atoi, integer, cast, tryparse, number","text":"#include \u003ccharconv>\n#include \u003coptional>\n#include \u003cstring_view>\n\nstd::optional\u003cint> parseInt(std::string_view s) {\n    int value;\n    auto [ptr, ec] = std::from_chars(s.data(), s.data() + s.size(), value);\n    if (ec != std::errc{} || ptr != s.data() + s.size()) return std::nullopt;\n    return value;\n}\n\n// if (auto n = parseInt(\"42\")) use(*n);","url":"https://mardywork1323.github.io/scriptfinder/cpp/string-to-int.html"}</script>
+<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
+<script src="../assets/config.js?v=mvwky5a4"></script>
+<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Convert a string to a number safely in C++","description":"Parse text into an integer and detect input that isn't a number instead of crashing.","programmingLanguage":"C++","codeSampleType":"code snippet","keywords":"parse, atoi, integer, cast, tryparse, number","text":"#include \u003ccharconv>\n#include \u003coptional>\n#include \u003cstring_view>\n\nstd::optional\u003cint> parseInt(std::string_view s) {\n    int value;\n    auto [ptr, ec] = std::from_chars(s.data(), s.data() + s.size(), value);\n    if (ec != std::errc{} || ptr != s.data() + s.size()) return std::nullopt;\n    return value;\n}\n\n// if (auto n = parseInt(\"42\")) use(*n);","url":"https://mardywork1323.github.io/scripthunting/cpp/string-to-int.html"}</script>
 
 </head>
 <body>
