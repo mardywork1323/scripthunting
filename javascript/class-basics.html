@@ -6,8 +6,8 @@
 <title>Define a class with a constructor in JavaScript · ScriptHunting</title>
 <meta name="description" content="A small Player type with a name, hit points and a method that changes them. Copy-ready JavaScript code with the command to build and run it.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://mardywork1323.github.io/scriptfinder/javascript/class-basics.html">
-<meta property="og:url" content="https://mardywork1323.github.io/scriptfinder/javascript/class-basics.html">
+<link rel="canonical" href="https://mardywork1323.github.io/scripthunting/javascript/class-basics.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scripthunting/javascript/class-basics.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScriptHunting">
 <meta property="og:title" content="Define a class with a constructor in JavaScript · ScriptHunting">
@@ -18,10 +18,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css">
-<script src="../assets/config.js"></script>
-<script src="../assets/site.js" defer></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Define a class with a constructor in JavaScript","description":"A small Player type with a name, hit points and a method that changes them.","programmingLanguage":"JavaScript","codeSampleType":"code snippet","keywords":"object, oop, struct, constructor, method, class","text":"class Player {\n  #hp;\n\n  constructor(name, hp) {\n    this.name = name;\n    this.#hp = hp;\n  }\n\n  hit(dmg) {\n    this.#hp = Math.max(0, this.#hp - dmg);\n  }\n\n  get hp() {\n    return this.#hp;\n  }\n}\n\nconst p = new Player(\"Ana\", 100);\np.hit(30);\nconsole.log(`${p.name} has ${p.hp} HP`);","url":"https://mardywork1323.github.io/scriptfinder/javascript/class-basics.html"}</script>
+<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
+<script src="../assets/config.js?v=mvwky5a4"></script>
+<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Define a class with a constructor in JavaScript","description":"A small Player type with a name, hit points and a method that changes them.","programmingLanguage":"JavaScript","codeSampleType":"code snippet","keywords":"object, oop, struct, constructor, method, class","text":"class Player {\n  #hp;\n\n  constructor(name, hp) {\n    this.name = name;\n    this.#hp = hp;\n  }\n\n  hit(dmg) {\n    this.#hp = Math.max(0, this.#hp - dmg);\n  }\n\n  get hp() {\n    return this.#hp;\n  }\n}\n\nconst p = new Player(\"Ana\", 100);\np.hit(30);\nconsole.log(`${p.name} has ${p.hp} HP`);","url":"https://mardywork1323.github.io/scripthunting/javascript/class-basics.html"}</script>
 
 </head>
 <body>
