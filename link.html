@@ -18,9 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=mvy5fwos">
-<script src="assets/config.js?v=mvy5fwos"></script>
-<script src="assets/site.js?v=mvy5fwos" defer></script>
+<link rel="stylesheet" href="assets/style.css?v=mvy5t710">
+<script src="assets/config.js?v=mvy5t710"></script>
+<script src="assets/site.js?v=mvy5t710" defer></script>
 
 
 </head>
@@ -70,7 +70,7 @@
   <span>Standard library first. Read a snippet before you ship it.</span>
 </footer>
 <script>
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
   var code = (new URLSearchParams(location.search).get("code") || "").toUpperCase();
   var msg = document.getElementById("link-msg"), box = document.getElementById("link-code"), act = document.getElementById("link-actions");
   var AI = (window.SH_CONFIG || {}).aiUrl;
@@ -101,9 +101,9 @@
       b.disabled = false; b.textContent = "Try again";
     });
   }
-  if (!SH.auth || !SH.auth.enabled) { msg.textContent = "Sign-in isn't available right now."; return; }
+  if (!window.SH || !SH.auth || !SH.auth.enabled) { msg.textContent = "Sign-in isn't available right now. Refresh the page to try again."; return; }
   SH.auth.onChange(function (u) { if (done) return; if (u) signedIn(u); else signedOut(); });
-})();
+});
 </script>
 </body>
 </html>
