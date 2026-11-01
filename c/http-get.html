@@ -18,9 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
-<script src="../assets/config.js?v=mvwky5a4"></script>
-<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<link rel="stylesheet" href="../assets/style.css?v=mvxhwa38">
+<script src="../assets/config.js?v=mvxhwa38"></script>
+<script src="../assets/site.js?v=mvxhwa38" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Make an HTTP GET request in C","description":"Download a page or call a JSON API.","programmingLanguage":"C","codeSampleType":"code snippet","keywords":"fetch, api, download, url, request, curl, http, rest","text":"#include \u003ccurl/curl.h>\n#include \u003cstdio.h>\n\nint main(void) {\n    CURL *curl = curl_easy_init();\n    if (!curl) return 1;\n\n    curl_easy_setopt(curl, CURLOPT_URL, \"https://example.com\");\n    curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);\n    CURLcode res = curl_easy_perform(curl);   /* body is printed to stdout */\n    if (res != CURLE_OK)\n        fprintf(stderr, \"%s\\n\", curl_easy_strerror(res));\n\n    curl_easy_cleanup(curl);\n    return res == CURLE_OK ? 0 : 1;\n}","url":"https://mardywork1323.github.io/scripthunting/c/http-get.html"}</script>
 
 </head>
@@ -34,7 +34,8 @@
     </form>
     <nav class="topnav" aria-label="Site">
       <a href="../">Search</a>
-      <a href="../ai.html" class="ai-link">AI helper</a>
+      <a href="../ai.html" class="ai-link">SH.AI</a>
+      <a href="../agent.html">Agent</a>
       <a href="../plans.html">Plans</a>
       <a href="../#how" data-intro>How it works</a>
       <button type="button" class="signin" data-signin>Sign in</button>
@@ -90,7 +91,8 @@ int main(void) {
 </main>
 <footer class="wrap foot">
   <span><a href="../">Search</a></span>
-  <span><a href="../ai.html">AI script helper</a></span>
+  <span><a href="../ai.html">SH.AI</a></span>
+  <span><a href="../agent.html">SH.AI Agent for VS Code</a></span>
   <span><a href="../plans.html">Plans</a></span>
   <span><a href="../c/">C snippets</a></span>
   <span><a href="../cpp/">C++ snippets</a></span>

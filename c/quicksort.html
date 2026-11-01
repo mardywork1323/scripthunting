@@ -18,9 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
-<script src="../assets/config.js?v=mvwky5a4"></script>
-<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<link rel="stylesheet" href="../assets/style.css?v=mvxhwa38">
+<script src="../assets/config.js?v=mvxhwa38"></script>
+<script src="../assets/site.js?v=mvxhwa38" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Quicksort in C","description":"The classic divide-and-conquer sort, written out by hand for interviews and coursework.","programmingLanguage":"C","codeSampleType":"code snippet","keywords":"sorting algorithm, divide and conquer, partition, pivot, recursion","text":"static void swap(int *a, int *b) { int t = *a; *a = *b; *b = t; }\n\nvoid quicksort(int *a, int lo, int hi) {\n    if (lo >= hi) return;\n    int pivot = a[hi], i = lo;\n    for (int j = lo; j \u003c hi; j++)\n        if (a[j] \u003c pivot) swap(&a[i++], &a[j]);\n    swap(&a[i], &a[hi]);\n    quicksort(a, lo, i - 1);\n    quicksort(a, i + 1, hi);\n}\n\n/* quicksort(arr, 0, n - 1); */","url":"https://mardywork1323.github.io/scripthunting/c/quicksort.html"}</script>
 
 </head>
@@ -34,7 +34,8 @@
     </form>
     <nav class="topnav" aria-label="Site">
       <a href="../">Search</a>
-      <a href="../ai.html" class="ai-link">AI helper</a>
+      <a href="../ai.html" class="ai-link">SH.AI</a>
+      <a href="../agent.html">Agent</a>
       <a href="../plans.html">Plans</a>
       <a href="../#how" data-intro>How it works</a>
       <button type="button" class="signin" data-signin>Sign in</button>
@@ -87,7 +88,8 @@ void quicksort(int *a, int lo, int hi) {
 </main>
 <footer class="wrap foot">
   <span><a href="../">Search</a></span>
-  <span><a href="../ai.html">AI script helper</a></span>
+  <span><a href="../ai.html">SH.AI</a></span>
+  <span><a href="../agent.html">SH.AI Agent for VS Code</a></span>
   <span><a href="../plans.html">Plans</a></span>
   <span><a href="../c/">C snippets</a></span>
   <span><a href="../cpp/">C++ snippets</a></span>
