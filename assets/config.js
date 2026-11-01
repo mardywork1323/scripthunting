@@ -1,10 +1,13 @@
 window.SH_CONFIG = {
   "aiUrl": "https://scripthunting-ai.scripthunting.workers.dev",
-  "firebase": null,
+  "firebase": {
+    "apiKey": "AIzaSyDjhYzrRECwHiGXrD243GL20uMduPSwavw",
+    "authDomain": "scripthunting-9f7ce.firebaseapp.com",
+    "projectId": "scripthunting-9f7ce",
+    "appId": "1:735522635241:web:60855a9401eb1cb3065f78"
+  },
   "signInProviders": [
-    "google",
-    "apple",
-    "microsoft"
+    "google"
   ],
   "prices": {
     "plus": {
