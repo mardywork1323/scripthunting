@@ -610,3 +610,12 @@ body.shai-body{background:var(--main-bg);overflow:hidden}
 .agent-steps li{display:block;line-height:1.6}
 .agent-steps li::before{margin-bottom:10px}
 .agent-steps kbd{font-size:11px;padding:2px 6px}
+/* link.html: connect SH.AI Agent */
+.link-page{display:grid;place-items:center;padding:56px 16px 72px}
+.link-card{width:100%;max-width:440px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:28px 24px;display:grid;gap:12px;justify-items:center;text-align:center}
+.link-card .mark{display:grid;place-items:center;width:44px;height:44px;border-radius:11px;background:#151A2C;color:#9AA8FF;font-weight:800;letter-spacing:-.02em}
+.link-card h1{margin:0;font-size:22px}
+.link-card .desc{margin:0}
+.link-code{margin:4px 0;font:700 26px/1 var(--f-mono);letter-spacing:.14em;padding:10px 16px;border-radius:10px;background:var(--bg);border:1px dashed var(--line)}
+.link-actions{min-height:8px}
+.link-note{margin:4px 0 0;font-size:13px;color:var(--muted)}
