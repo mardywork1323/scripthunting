@@ -3,88 +3,98 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>AI script helper · ScriptHunting</title>
-<meta name="description" content="Describe what you&#39;re building and the ScriptHunting AI writes the script: Unity C#, Minecraft mods, Godot, Python, JavaScript, C++ and more. It asks the right questions, improves the code and finds related projects on the web.">
+<title>SH.AI · ScriptHunting</title>
+<meta name="description" content="SH.AI is ScriptHunting&#39;s AI script helper. Describe what you&#39;re building and it writes the script: Unity C#, Minecraft mods, Godot, Python, JavaScript, C++ and more. Keep chats and projects in one place.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://mardywork1323.github.io/scripthunting/ai.html">
 <meta property="og:url" content="https://mardywork1323.github.io/scripthunting/ai.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScriptHunting">
-<meta property="og:title" content="AI script helper · ScriptHunting">
-<meta property="og:description" content="Describe what you&#39;re building and the ScriptHunting AI writes the script: Unity C#, Minecraft mods, Godot, Python, JavaScript, C++ and more. It asks the right questions, improves the code and finds related projects on the web.">
+<meta property="og:title" content="SH.AI · ScriptHunting">
+<meta property="og:description" content="SH.AI is ScriptHunting&#39;s AI script helper. Describe what you&#39;re building and it writes the script: Unity C#, Minecraft mods, Godot, Python, JavaScript, C++ and more. Keep chats and projects in one place.">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#151A2C">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23151A2C%22%2F%3E%3Cpath%20d%3D%22M12%209l-6%207%206%207M20%209l6%207-6%207%22%20fill%3D%22none%22%20stroke%3D%22%239AA8FF%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="assets/style.css?v=mvwky5a4">
-<script src="assets/config.js?v=mvwky5a4"></script>
-<script src="assets/site.js?v=mvwky5a4" defer></script>
+<link rel="stylesheet" href="assets/style.css?v=mvxhwa38">
+<script src="assets/config.js?v=mvxhwa38"></script>
+<script src="assets/site.js?v=mvxhwa38" defer></script>
 
 
 </head>
-<body>
-<header class="band slim">
-  <div class="wrap">
-    <a class="wordmark" href="">Script<b>Hunting</b></a>
-    <form class="mini" action="" method="get" role="search">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
-      <input type="search" name="q" placeholder="Search all snippets" aria-label="Search all snippets" autocomplete="off" spellcheck="false">
-    </form>
-    <nav class="topnav" aria-label="Site">
-      <a href="">Search</a>
-      <a href="ai.html" class="ai-link" aria-current="page">AI helper</a>
-      <a href="plans.html">Plans</a>
-      <a href="#how" data-intro>How it works</a>
-      <button type="button" class="signin" data-signin>Sign in</button>
-    </nav>
-    <nav class="langnav" aria-label="Languages"><a class="pill" href="c/" style="--lc:var(--l-c)"><span class="dot"></span>C</a><a class="pill" href="cpp/" style="--lc:var(--l-cpp)"><span class="dot"></span>C++</a><a class="pill" href="csharp/" style="--lc:var(--l-cs)"><span class="dot"></span>C#</a><a class="pill" href="javascript/" style="--lc:var(--l-js)"><span class="dot"></span>JavaScript</a><a class="pill" href="python/" style="--lc:var(--l-py)"><span class="dot"></span>Python</a><a class="pill" href="all.html">All on one page</a></nav>
-  </div>
-</header>
-<main class="wrap ai-page">
-  <div class="ai-head">
-    <div>
-      <h1>AI script helper</h1>
-      <p>Tell it what you're building. It asks which language and what the script is for, writes the full script, improves it on request, and finds related projects on the web.</p>
+<body class="shai-body">
+<div class="app" id="app">
+  <aside class="side" id="side" aria-label="Chats and projects">
+    <div class="side-top">
+      <a class="shlogo" href="ai.html" aria-label="SH.AI home"><span class="shmark big" aria-hidden="true">SH</span><span>SH<b>.AI</b></span></a>
     </div>
-    <div class="ai-tools">
+    <button type="button" class="newchat" data-new-chat><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>New chat<kbd>Ctrl Shift O</kbd></button>
+    <div class="side-scroll">
+      <section class="sblock" aria-labelledby="projects-h">
+        <h2 class="shead" id="projects-h">Projects</h2>
+        <div id="projlist"></div>
+      </section>
+      <section class="sblock" aria-labelledby="chats-h">
+        <h2 class="shead" id="chats-h">Chats</h2>
+        <div id="chatlist"></div>
+      </section>
+    </div>
+    <div class="side-foot">
+      <nav class="side-links" aria-label="ScriptHunting">
+        <a href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Snippet search</a>
+        <a href="agent.html"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m8 10 2 2-2 2M12 14h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>SH.AI Agent for VS Code</a>
+        <a href="plans.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Plans</a>
+      </nav>
+      <button type="button" class="acct" data-signin>Sign in</button>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="main">
+    <header class="topbar">
+      <button type="button" class="iconbtn only-mobile" id="side-open" aria-label="Open chats"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <div class="ttl"><span class="ttl-name" id="chat-title">New chat</span><span class="projchip" id="proj-chip" hidden></span></div>
       <span class="meter" id="meter" aria-live="polite"></span>
-      <button type="button" class="btn" id="newchat" hidden>New chat</button>
+      <button type="button" class="iconbtn" data-new-chat aria-label="New chat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+    </header>
+    <div class="scroller" id="scroller">
+      <div class="convo">
+        <div class="banner" id="demo-banner" hidden><b>SH.AI is being connected and goes live soon.</b><span>Below is an example of how it works.</span></div>
+        <section class="empty" id="empty" aria-labelledby="empty-h">
+          <span class="shmark huge" aria-hidden="true">SH</span>
+          <h1 id="empty-h">What are we building today?</h1>
+          <p>Tell SH.AI about your project. It asks the right questions, writes the whole script, and improves it with you.</p>
+          <div class="cards"><button type="button" class="card" data-suggest="I&#39;m making a Minecraft-like game in Unity C#. I need a script for a blocky tree that grows from a sapling and drops wood when chopped."><b>Grow a tree</b><span>Unity C# · blocky, choppable</span></button><button type="button" class="card" data-suggest="Write a Unity C# player movement script with walking, running and jumping."><b>Player movement</b><span>Unity C# · walk, run, jump</span></button><button type="button" class="card" data-suggest="Write a simple Snake game in Python with pygame, with comments for a beginner."><b>Snake game</b><span>Python · beginner friendly</span></button><button type="button" class="card" data-suggest="Here&#39;s an error I&#39;m getting. Explain what it means and how to fix it:
+
+"><b>Fix my error</b><span>Paste an error message</span></button></div>
+        </section>
+        <div id="log" aria-live="polite"></div>
+      </div>
     </div>
-  </div>
-  <div class="banner" id="demo-banner" hidden><b>The AI helper is being connected and goes live soon.</b><span>Below is an example conversation, so you can see how it works.</span></div>
-  <section class="startcard" id="start" aria-labelledby="start-h">
-    <h2 id="start-h">What do you want to build?</h2>
-    <form id="startform" class="startform" style="display:grid;gap:16px">
-      <div class="field">
-        <span class="flabel" id="lp-label">Language or engine</span>
-        <div class="langpick" id="langpick" role="group" aria-labelledby="lp-label"><button type="button" class="lchip" data-lang="Unity (C#)" aria-pressed="false">Unity (C#)</button><button type="button" class="lchip" data-lang="Minecraft mod (Java)" aria-pressed="false">Minecraft mod (Java)</button><button type="button" class="lchip" data-lang="Godot (GDScript)" aria-pressed="false">Godot (GDScript)</button><button type="button" class="lchip" data-lang="Roblox (Luau)" aria-pressed="false">Roblox (Luau)</button><button type="button" class="lchip" data-lang="Python" aria-pressed="false">Python</button><button type="button" class="lchip" data-lang="JavaScript" aria-pressed="false">JavaScript</button><button type="button" class="lchip" data-lang="C++" aria-pressed="false">C++</button><button type="button" class="lchip" data-lang="C" aria-pressed="false">C</button><button type="button" class="lchip" data-lang="C#" aria-pressed="false">C#</button><button type="button" class="lchip" data-lang="Not sure yet" aria-pressed="false">Not sure yet</button></div>
-      </div>
-      <div class="field">
-        <label for="s-project">Your project</label>
-        <input id="s-project" type="text" placeholder="e.g. a Minecraft-style survival game" autocomplete="off">
-      </div>
-      <div class="field">
-        <label for="s-what">What should the script do?</label>
-        <textarea id="s-what" rows="3" placeholder="e.g. grow trees with random heights that drop wood when the player chops them"></textarea>
-      </div>
-      <div class="startrow">
-        <div class="examples"><span>Or try:</span><button type="button" data-example="A tree that grows and can be chopped, for my Minecraft-like game">A tree that grows and can be chopped, for my Minecraft-like game</button><button type="button" data-example="Player movement with jumping in Unity">Player movement with jumping in Unity</button><button type="button" data-example="A Snake game in Python">A Snake game in Python</button><button type="button" data-example="A to-do list web app in JavaScript">A to-do list web app in JavaScript</button></div>
-        <button type="submit" class="btn-go" id="s-go">Write my script</button>
-      </div>
-    </form>
-  </section>
-  <div id="log" aria-live="polite"></div>
-  <div class="composer-wrap">
-    <form class="composer" id="composer">
-      <label for="prompt" class="sr">Message the AI</label>
-      <textarea id="prompt" rows="1" placeholder="Describe the script you need, or ask for a change…"></textarea>
-      <button type="submit" id="send">Send</button>
-    </form>
-    <div class="composer-hint"><span>Enter to send · Shift+Enter for a new line</span><span>The AI can make mistakes. Test code before you use it.</span></div>
-  </div>
-</main>
+    <div class="dock">
+      <form class="composer" id="composer">
+        <label for="prompt" class="sr">Message SH.AI</label>
+        <textarea id="prompt" rows="1" placeholder="Message SH.AI"></textarea>
+        <button type="submit" id="send" class="sendbtn" aria-label="Send"></button>
+      </form>
+      <p class="fine-print">SH.AI can make mistakes. Test code before you use it. <span class="undo" id="undo" hidden>Chat deleted. <button type="button" class="linkish" data-undo>Undo</button></span></p>
+    </div>
+  </main>
+</div>
+<div class="pdlg" id="proj-dlg" role="dialog" aria-modal="true" aria-labelledby="pd-title" hidden>
+  <form class="pdcard" id="pd-form">
+    <h2 id="pd-title">New project</h2>
+    <p class="pd-help">SH.AI remembers these details in every chat in this project.</p>
+    <div class="field"><label for="pd-name">Project name</label><input id="pd-name" maxlength="80" placeholder="e.g. Blocky World" autocomplete="off"></div>
+    <div class="field"><label for="pd-engine">Language or engine</label><input id="pd-engine" maxlength="80" list="pd-engines" placeholder="e.g. Unity C#" autocomplete="off">
+      <datalist id="pd-engines"><option value="Unity C#"><option value="Godot GDScript"><option value="Minecraft mod (Java, Fabric)"><option value="Roblox Luau"><option value="Python"><option value="JavaScript"><option value="C++"><option value="C"></datalist></div>
+    <div class="field"><label for="pd-notes">About the project</label><textarea id="pd-notes" rows="4" maxlength="1500" placeholder="e.g. 3D blocky survival game, first-person, trees and caves, mobile friendly"></textarea></div>
+    <p class="pd-error" id="pd-error" role="alert" hidden></p>
+    <div class="pd-confirm" id="pd-confirm" hidden><span>Delete this project? Its chats stay in your chat list.</span><button type="button" class="btn" id="pd-confirm-no">Keep it</button><button type="button" class="btn danger" id="pd-confirm-yes">Delete</button></div>
+    <div class="pd-actions"><button type="button" class="btn danger-text" id="pd-delete" hidden>Delete project</button><span id="pd-count" class="pd-count"></span><button type="button" class="btn" data-pd-close>Cancel</button><button type="submit" class="btn primary" id="pd-save">Save</button></div>
+  </form>
+</div>
 <div class="toast" id="toast" role="status"></div>
 <script>window.Prism = window.Prism || {}; window.Prism.manual = true;</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
@@ -106,6 +116,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-powershell.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
-<script src="assets/ai.js?v=mvwky5a4" defer></script>
+<script src="assets/shmd.js?v=mvxhwa38"></script>
+<script src="assets/shai.js?v=mvxhwa38" defer></script>
 </body>
 </html>
