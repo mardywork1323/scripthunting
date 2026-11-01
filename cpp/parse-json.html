@@ -18,9 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
-<script src="../assets/config.js?v=mvwky5a4"></script>
-<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<link rel="stylesheet" href="../assets/style.css?v=mvxhwa38">
+<script src="../assets/config.js?v=mvxhwa38"></script>
+<script src="../assets/site.js?v=mvxhwa38" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Parse and create JSON in C++","description":"Turn JSON text into objects and back again.","programmingLanguage":"C++","codeSampleType":"code snippet","keywords":"json, serialize, deserialize, stringify, parse","text":"#include \u003ciostream>\n#include \u003cstring>\n#include \u003cnlohmann/json.hpp>\n\nint main() {\n    auto j = nlohmann::json::parse(R\"({\"name\":\"Ana\",\"age\":31})\");\n    std::string name = j[\"name\"];\n    int age = j.value(\"age\", 0);\n    std::cout \u003c\u003c name \u003c\u003c \" is \" \u003c\u003c age \u003c\u003c '\\n';\n\n    j[\"city\"] = \"Oslo\";\n    std::cout \u003c\u003c j.dump(2) \u003c\u003c '\\n';   // pretty-printed JSON\n}","url":"https://mardywork1323.github.io/scripthunting/cpp/parse-json.html"}</script>
 
 </head>
@@ -34,7 +34,8 @@
     </form>
     <nav class="topnav" aria-label="Site">
       <a href="../">Search</a>
-      <a href="../ai.html" class="ai-link">AI helper</a>
+      <a href="../ai.html" class="ai-link">SH.AI</a>
+      <a href="../agent.html">Agent</a>
       <a href="../plans.html">Plans</a>
       <a href="../#how" data-intro>How it works</a>
       <button type="button" class="signin" data-signin>Sign in</button>
@@ -87,7 +88,8 @@ int main() {
 </main>
 <footer class="wrap foot">
   <span><a href="../">Search</a></span>
-  <span><a href="../ai.html">AI script helper</a></span>
+  <span><a href="../ai.html">SH.AI</a></span>
+  <span><a href="../agent.html">SH.AI Agent for VS Code</a></span>
   <span><a href="../plans.html">Plans</a></span>
   <span><a href="../c/">C snippets</a></span>
   <span><a href="../cpp/">C++ snippets</a></span>

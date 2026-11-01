@@ -18,9 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
-<script src="../assets/config.js?v=mvwky5a4"></script>
-<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<link rel="stylesheet" href="../assets/style.css?v=mvxhwa38">
+<script src="../assets/config.js?v=mvxhwa38"></script>
+<script src="../assets/site.js?v=mvxhwa38" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Run work in parallel in C++","description":"Start several jobs at once and collect their results.","programmingLanguage":"C++","codeSampleType":"code snippet","keywords":"threads, async, await, concurrency, promise, multithreading, tasks","text":"#include \u003cfuture>\n#include \u003ciostream>\n#include \u003cvector>\n\nint square(int x) { return x * x; }\n\nint main() {\n    std::vector\u003cstd::future\u003cint>> jobs;\n    for (int i = 1; i \u003c= 4; ++i)\n        jobs.push_back(std::async(std::launch::async, square, i));\n\n    for (auto& j : jobs) std::cout \u003c\u003c j.get() \u003c\u003c '\\n';   // 1 4 9 16\n}","url":"https://mardywork1323.github.io/scripthunting/cpp/parallel.html"}</script>
 
 </head>
@@ -34,7 +34,8 @@
     </form>
     <nav class="topnav" aria-label="Site">
       <a href="../">Search</a>
-      <a href="../ai.html" class="ai-link">AI helper</a>
+      <a href="../ai.html" class="ai-link">SH.AI</a>
+      <a href="../agent.html">Agent</a>
       <a href="../plans.html">Plans</a>
       <a href="../#how" data-intro>How it works</a>
       <button type="button" class="signin" data-signin>Sign in</button>
@@ -87,7 +88,8 @@ int main() {
 </main>
 <footer class="wrap foot">
   <span><a href="../">Search</a></span>
-  <span><a href="../ai.html">AI script helper</a></span>
+  <span><a href="../ai.html">SH.AI</a></span>
+  <span><a href="../agent.html">SH.AI Agent for VS Code</a></span>
   <span><a href="../plans.html">Plans</a></span>
   <span><a href="../c/">C snippets</a></span>
   <span><a href="../cpp/">C++ snippets</a></span>

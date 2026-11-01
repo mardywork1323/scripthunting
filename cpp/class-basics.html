@@ -18,9 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
-<script src="../assets/config.js?v=mvwky5a4"></script>
-<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<link rel="stylesheet" href="../assets/style.css?v=mvxhwa38">
+<script src="../assets/config.js?v=mvxhwa38"></script>
+<script src="../assets/site.js?v=mvxhwa38" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Define a class with a constructor in C++","description":"A small Player type with a name, hit points and a method that changes them.","programmingLanguage":"C++","codeSampleType":"code snippet","keywords":"object, oop, struct, constructor, method, class","text":"#include \u003calgorithm>\n#include \u003ciostream>\n#include \u003cstring>\n#include \u003cutility>\n\nclass Player {\npublic:\n    Player(std::string name, int hp) : name_(std::move(name)), hp_(hp) {}\n\n    void hit(int dmg) { hp_ = std::max(0, hp_ - dmg); }\n    int hp() const { return hp_; }\n    const std::string& name() const { return name_; }\n\nprivate:\n    std::string name_;\n    int hp_;\n};\n\nint main() {\n    Player p{\"Ana\", 100};\n    p.hit(30);\n    std::cout \u003c\u003c p.name() \u003c\u003c \" has \" \u003c\u003c p.hp() \u003c\u003c \" HP\\n\";\n}","url":"https://mardywork1323.github.io/scripthunting/cpp/class-basics.html"}</script>
 
 </head>
@@ -34,7 +34,8 @@
     </form>
     <nav class="topnav" aria-label="Site">
       <a href="../">Search</a>
-      <a href="../ai.html" class="ai-link">AI helper</a>
+      <a href="../ai.html" class="ai-link">SH.AI</a>
+      <a href="../agent.html">Agent</a>
       <a href="../plans.html">Plans</a>
       <a href="../#how" data-intro>How it works</a>
       <button type="button" class="signin" data-signin>Sign in</button>
@@ -97,7 +98,8 @@ int main() {
 </main>
 <footer class="wrap foot">
   <span><a href="../">Search</a></span>
-  <span><a href="../ai.html">AI script helper</a></span>
+  <span><a href="../ai.html">SH.AI</a></span>
+  <span><a href="../agent.html">SH.AI Agent for VS Code</a></span>
   <span><a href="../plans.html">Plans</a></span>
   <span><a href="../c/">C snippets</a></span>
   <span><a href="../cpp/">C++ snippets</a></span>
