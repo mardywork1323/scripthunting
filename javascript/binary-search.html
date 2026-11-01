@@ -18,9 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=mvwky5a4">
-<script src="../assets/config.js?v=mvwky5a4"></script>
-<script src="../assets/site.js?v=mvwky5a4" defer></script>
+<link rel="stylesheet" href="../assets/style.css?v=mvxhwa38">
+<script src="../assets/config.js?v=mvxhwa38"></script>
+<script src="../assets/site.js?v=mvxhwa38" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Binary search a sorted array in JavaScript","description":"Find an item's index in O(log n). The array must already be sorted.","programmingLanguage":"JavaScript","codeSampleType":"code snippet","keywords":"find, lookup, bisect, log n, lower bound","text":"function binarySearch(arr, target) {\n  let lo = 0, hi = arr.length - 1;\n  while (lo \u003c= hi) {\n    const mid = (lo + hi) >> 1;\n    if (arr[mid] === target) return mid;\n    if (arr[mid] \u003c target) lo = mid + 1;\n    else hi = mid - 1;\n  }\n  return -1;\n}","url":"https://mardywork1323.github.io/scripthunting/javascript/binary-search.html"}</script>
 
 </head>
@@ -34,7 +34,8 @@
     </form>
     <nav class="topnav" aria-label="Site">
       <a href="../">Search</a>
-      <a href="../ai.html" class="ai-link">AI helper</a>
+      <a href="../ai.html" class="ai-link">SH.AI</a>
+      <a href="../agent.html">Agent</a>
       <a href="../plans.html">Plans</a>
       <a href="../#how" data-intro>How it works</a>
       <button type="button" class="signin" data-signin>Sign in</button>
@@ -84,7 +85,8 @@
 </main>
 <footer class="wrap foot">
   <span><a href="../">Search</a></span>
-  <span><a href="../ai.html">AI script helper</a></span>
+  <span><a href="../ai.html">SH.AI</a></span>
+  <span><a href="../agent.html">SH.AI Agent for VS Code</a></span>
   <span><a href="../plans.html">Plans</a></span>
   <span><a href="../c/">C snippets</a></span>
   <span><a href="../cpp/">C++ snippets</a></span>
