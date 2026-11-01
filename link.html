@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Connect SH.AI Agent · ScriptHunting</title>
+<meta name="description" content="Connect SH.AI Agent in your code editor to your ScriptHunting account.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://mardywork1323.github.io/scripthunting/link.html">
+<meta property="og:url" content="https://mardywork1323.github.io/scripthunting/link.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ScriptHunting">
+<meta property="og:title" content="Connect SH.AI Agent · ScriptHunting">
+<meta property="og:description" content="Connect SH.AI Agent in your code editor to your ScriptHunting account.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#151A2C">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%23151A2C%22%2F%3E%3Cpath%20d%3D%22M12%209l-6%207%206%207M20%209l6%207-6%207%22%20fill%3D%22none%22%20stroke%3D%22%239AA8FF%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=mvy5fwos">
+<script src="assets/config.js?v=mvy5fwos"></script>
+<script src="assets/site.js?v=mvy5fwos" defer></script>
+
+
+</head>
+<body>
+<header class="band slim">
+  <div class="wrap">
+    <a class="wordmark" href="">Script<b>Hunting</b></a>
+    <form class="mini" action="" method="get" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
+      <input type="search" name="q" placeholder="Search all snippets" aria-label="Search all snippets" autocomplete="off" spellcheck="false">
+    </form>
+    <nav class="topnav" aria-label="Site">
+      <a href="">Search</a>
+      <a href="ai.html" class="ai-link">SH.AI</a>
+      <a href="agent.html" aria-current="page">Agent</a>
+      <a href="plans.html">Plans</a>
+      <a href="#how" data-intro>How it works</a>
+      <button type="button" class="signin" data-signin>Sign in</button>
+    </nav>
+    <nav class="langnav" aria-label="Languages"><a class="pill" href="c/" style="--lc:var(--l-c)"><span class="dot"></span>C</a><a class="pill" href="cpp/" style="--lc:var(--l-cpp)"><span class="dot"></span>C++</a><a class="pill" href="csharp/" style="--lc:var(--l-cs)"><span class="dot"></span>C#</a><a class="pill" href="javascript/" style="--lc:var(--l-js)"><span class="dot"></span>JavaScript</a><a class="pill" href="python/" style="--lc:var(--l-py)"><span class="dot"></span>Python</a><a class="pill" href="all.html">All on one page</a></nav>
+  </div>
+</header>
+<main class="wrap link-page">
+  <section class="link-card" id="link-card">
+    <div class="mark">SH</div>
+    <h1>Connect SH.AI Agent</h1>
+    <p class="desc" id="link-msg">Loading…</p>
+    <p class="link-code" id="link-code" hidden></p>
+    <div class="link-actions" id="link-actions"></div>
+    <p class="link-note">Only continue if you just clicked <b>Sign in</b> in SH.AI Agent and the code above matches the one in your editor.</p>
+  </section>
+</main>
+<footer class="wrap foot">
+  <span><a href="">Search</a></span>
+  <span><a href="ai.html">SH.AI</a></span>
+  <span><a href="agent.html">SH.AI Agent for VS Code</a></span>
+  <span><a href="plans.html">Plans</a></span>
+  <span><a href="c/">C snippets</a></span>
+  <span><a href="cpp/">C++ snippets</a></span>
+  <span><a href="csharp/">C# snippets</a></span>
+  <span><a href="javascript/">JavaScript snippets</a></span>
+  <span><a href="python/">Python snippets</a></span>
+  <span><a href="all.html">Every snippet on one page</a></span>
+  <span><a href="terms.html">Terms</a></span>
+  <span><a href="privacy.html">Privacy</a></span>
+  <span><a href="refunds.html">Refunds</a></span>
+  <span>Standard library first. Read a snippet before you ship it.</span>
+</footer>
+<script>
+(function () {
+  var code = (new URLSearchParams(location.search).get("code") || "").toUpperCase();
+  var msg = document.getElementById("link-msg"), box = document.getElementById("link-code"), act = document.getElementById("link-actions");
+  var AI = (window.SH_CONFIG || {}).aiUrl;
+  if (!/^[A-HJ-NP-Z2-9]{8}$/.test(code)) { msg.textContent = "This link is missing its code. Click Sign in inside SH.AI Agent in your editor to get a new one."; return; }
+  box.hidden = false; box.textContent = code.slice(0, 4) + " " + code.slice(4);
+  var done = false;
+  function signedOut() {
+    msg.textContent = "Sign in to connect your editor. You'll get the same daily prompts as on the website.";
+    act.innerHTML = '<button type="button" class="btn primary big" id="link-signin">Sign in</button>';
+    document.getElementById("link-signin").onclick = function () { SH.auth.signIn(); };
+  }
+  function signedIn(u) {
+    msg.textContent = "Signed in as " + (u.email || "your account") + ". Connect SH.AI Agent to this account?";
+    act.innerHTML = '<button type="button" class="btn primary big" id="link-go">Connect VS Code</button>';
+    document.getElementById("link-go").onclick = connect;
+  }
+  function connect() {
+    var b = document.getElementById("link-go"); b.disabled = true; b.textContent = "Connecting…";
+    SH.auth.token().then(function (t) {
+      return fetch(AI + "/link", { method: "POST", headers: { "Content-Type": "application/json", Authorization: "Bearer " + t }, body: JSON.stringify({ code: code }) });
+    }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); }).then(function (x) {
+      if (!x.ok) throw new Error(x.j.message || "Couldn't connect.");
+      done = true;
+      msg.textContent = "Done! Go back to your editor. SH.AI Agent is now signed in.";
+      act.innerHTML = ""; box.hidden = true;
+    }).catch(function (e) {
+      msg.textContent = (e && e.message) || "Couldn't connect. Try again.";
+      b.disabled = false; b.textContent = "Try again";
+    });
+  }
+  if (!SH.auth || !SH.auth.enabled) { msg.textContent = "Sign-in isn't available right now."; return; }
+  SH.auth.onChange(function (u) { if (done) return; if (u) signedIn(u); else signedOut(); });
+})();
+</script>
+</body>
+</html>
