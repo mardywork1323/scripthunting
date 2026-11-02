@@ -18,16 +18,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=mvxhwa38">
-<script src="../assets/config.js?v=mvxhwa38"></script>
-<script src="../assets/site.js?v=mvxhwa38" defer></script>
+<link rel="stylesheet" href="../assets/style.css?v=mvzjgvy5">
+<script src="../assets/config.js?v=mvzjgvy5"></script>
+<script src="../assets/site.js?v=mvzjgvy5" defer></script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Define a class with a constructor in C++","description":"A small Player type with a name, hit points and a method that changes them.","programmingLanguage":"C++","codeSampleType":"code snippet","keywords":"object, oop, struct, constructor, method, class","text":"#include \u003calgorithm>\n#include \u003ciostream>\n#include \u003cstring>\n#include \u003cutility>\n\nclass Player {\npublic:\n    Player(std::string name, int hp) : name_(std::move(name)), hp_(hp) {}\n\n    void hit(int dmg) { hp_ = std::max(0, hp_ - dmg); }\n    int hp() const { return hp_; }\n    const std::string& name() const { return name_; }\n\nprivate:\n    std::string name_;\n    int hp_;\n};\n\nint main() {\n    Player p{\"Ana\", 100};\n    p.hit(30);\n    std::cout \u003c\u003c p.name() \u003c\u003c \" has \" \u003c\u003c p.hp() \u003c\u003c \" HP\\n\";\n}","url":"https://mardywork1323.github.io/scripthunting/cpp/class-basics.html"}</script>
 
 </head>
 <body>
 <header class="band slim">
   <div class="wrap">
-    <a class="wordmark" href="../">Script<b>Hunting</b></a>
+    <a class="homelogo" href="../" title="Back to home" aria-label="ScriptHunting home"><span class="hl-mark" aria-hidden="true">SH</span><span class="wordmark">Script<b>Hunting</b></span></a>
     <form class="mini" action="../" method="get" role="search">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg>
       <input type="search" name="q" placeholder="Search all snippets" aria-label="Search all snippets" autocomplete="off" spellcheck="false">
