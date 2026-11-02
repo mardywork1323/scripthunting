@@ -619,3 +619,13 @@ body.shai-body{background:var(--main-bg);overflow:hidden}
 .link-code{margin:4px 0;font:700 26px/1 var(--f-mono);letter-spacing:.14em;padding:10px 16px;border-radius:10px;background:var(--bg);border:1px dashed var(--line)}
 .link-actions{min-height:8px}
 .link-note{margin:4px 0 0;font-size:13px;color:var(--muted)}
+/* Home logo (top left on every page) */
+.homelogo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;border-radius:10px;flex:none}
+.homelogo:focus-visible{outline:2px solid var(--band-accent);outline-offset:3px}
+.hl-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--band-accent);color:var(--band);font:800 14px/1 var(--f-display);letter-spacing:-0.03em;transition:transform .15s ease}
+.homelogo:hover .hl-mark{transform:translateY(-1px) scale(1.05)}
+.home-top{justify-content:space-between;align-items:center;gap:16px}
+.topbar .homelogo .hl-mark{width:30px;height:30px;font-size:12px;border-radius:9px;background:var(--band);color:var(--band-accent)}
+.topbar .homelogo.only-mobile{display:none}
+@media (max-width:820px){ .topbar .homelogo.only-mobile{display:inline-flex} }
+@media (prefers-reduced-motion: reduce){ .hl-mark{transition:none} }
