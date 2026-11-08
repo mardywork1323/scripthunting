@@ -121,7 +121,8 @@
     if (m.role === "user") return '<article class="msg user"><div class="bubble">' + esc(m.content).replace(/\n/g, "<br>") + "</div></article>";
     var hasCode = /```/.test(m.content || "");
     var status = m.status ? '<div class="status"><span class="spin" aria-hidden="true"></span>' + esc(m.status) + "</div>" : "";
-    var note = m.note ? '<div class="note ' + (m.noteKind || "") + '">' + m.note + "</div>" : "";
+    var contBtn = m.cont && isLast && !busy ? ' <span class="note-actions"><button type="button" class="btn" data-continue>Continue writing</button></span>' : "";
+    var note = m.note ? '<div class="note ' + (m.noteKind || "") + '">' + (m.cont ? "SH.AI stopped because the reply got very long." : m.note) + contBtn + "</div>" : "";
     var chips = isLast && !busy && hasCode && !m.demo ? '<div class="chips" aria-label="Next steps">' + CHIPS.map(function (c, j) { return '<button type="button" class="chip" data-chip="' + j + '">' + esc(c[0]) + "</button>"; }).join("") + "</div>" : "";
     return '<article class="msg ai"><div class="who"><span class="shmark" aria-hidden="true">SH</span>SH.AI' + (m.demo ? ' <span class="tag-ex">Example</span>' : "") + "</div>" +
       status + '<div class="md">' + M.md(m.content || "") + "</div>" + M.sourcesHtml(m.sources) + note + chips + "</article>";
